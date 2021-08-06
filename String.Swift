@@ -1,5 +1,5 @@
 import Foundation
-print("STRING MYSTERY)
+print("STRING MYSTERY")
 print("STRING AND CHARACTER") 
 //---Code---
 //Single Line String
