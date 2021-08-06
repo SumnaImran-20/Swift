@@ -1,0 +1,160 @@
+// FOR- IN LOOPS 
+---Code---
+let names = ["Sumna", "Nabiha", "Umair", "Nabiha"] 
+for i in names { 
+print("Hello, \(i)!") 
+}
+---Output---
+Hello, Sumna!
+Hello, Nabiha!
+Hello, Umair!
+Hello, Nabiha!
+
+---Code---
+let details = ["Name" : "Sumna" , "Age": "Twenty One", "Sem": "Four"]
+for (key, value) in details {
+print("\(key) is  \(value)")
+} 
+---Output---
+Name is  Sumna
+Age is  Twenty One
+Sem is  Four
+
+//FOR-IN LOOPS FOR UMERIC RANGE
+---Code---
+for index in 1...5 { 
+print("\(index) times 2 is \(index * 2)") 
+}
+---Output---
+1 times 2 is 2
+2 times 2 is 4
+3 times 2 is 6
+4 times 2 is 8
+5 times 2 is 10
+
+----Code---
+let base = 3
+let power = 3
+var answer = 1
+for _ in 1...power { 
+answer *= base
+} 
+print("\(base) to the power of \(power) is \(answer)")
+---Output---
+3 to the power of 3 is 27
+
+---Code---
+let minutes = 10
+for tickMark in 0..<minutes {
+    print(tickMark)
+}
+---Output---
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+---Code---
+let minutes = 60
+let minuteInterval = 5
+for tickMark in stride(from: 0, to: minutes, by: minuteInterval) { 
+ print(tickMark)
+}
+---Output---
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+
+---Code---
+let hours = 12
+let hourInterval = 3
+for tickMark in stride(from: 3, through: hours, by: hourInterval) { 
+ print(tickMark)
+}
+---Output---
+3
+6
+9
+12
+
+//Conditional Statements
+---Code---
+var temperatureInFahrenheit = 86
+if temperatureInFahrenheit <= 32 { 
+print("It's very cold. Consider wearing a scarf.") 
+} else if temperatureInFahrenheit >= 86 { 
+print("It's really warm. Don't forget to wear sunscreen.") 
+} else { 
+print("It's not that cold. Wear a t-shirt.") 
+}
+
+---Output---
+It's really warm. Don't forget to wear sunscreen.
+
+---Code---
+print("Name:Sumna")
+let randomcharacter: Character = "a"
+switch randomcharacter { 
+case "s": 
+print("The first letter my name is \(randomcharacter).") 
+case "a": 
+print("The last letter of my name is \(randomcharacter).") 
+default: 
+print("Some other character") 
+}
+---Output---
+Name:Sumna
+The last letter of my name is a.
+
+---Code---
+print("Name:Sumna")
+let randomcharacter: Character = "S"
+switch randomcharacter { 
+case "s","S": 
+print("The first letter my name is \(randomcharacter).") 
+case "a","A": 
+print("The last letter of my name is \(randomcharacter).") 
+default: 
+print("Some other character") 
+}
+---Output---
+Name:Sumna
+The first letter my name is S.
+
+---Code---
+let approximateCount = 62
+let countedThings = "moons orbiting Saturn"
+let naturalCount: String
+switch approximateCount { 
+case 0: 
+naturalCount = "no"
+case 1..<5: 
+naturalCount = "a few"
+case 5..<12: 
+naturalCount = "several"
+case 12..<100: 
+naturalCount = "dozens of"
+case 100..<1000: 
+naturalCount = "hundreds of"
+default: 
+naturalCount = "many"
+} 
+print("There are \(naturalCount) \(countedThings).") 
+
+---Output---
+There are dozens of moons orbiting Saturn.
