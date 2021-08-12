@@ -1,0 +1,152 @@
+CREATING AN EMPTY ARRAY
+---Code---
+//Integer Data type
+var NUMBER: [Int] = [] 
+print("NUMBER is of type [Int] with \(NUMBER.count) items.") 
+
+//Double Data type
+var DoubleNumber: [Double] = []
+print("DoubleNumber is of type [Double] with \(DoubleNumber.count) items.")
+
+---Output---
+NUMBER is of type [Int] with 0 items.
+DoubleNumber is of type [Double] with 0 items.
+
+//INSERTING ELEMENTS INTO ARRAY
+---Code---
+var DoubleNumber: [Double] = []
+DoubleNumber.append(3.2)
+print("Array: \(DoubleNumber)")
+print("DoubleNumber is of type [Double] with \(DoubleNumber.count) items.")
+---Output---
+Array: [3.2]
+DoubleNumber is of type [Double] with 1 items.
+
+//CREATING AN ARRAY WITH A DEFAULT VALUE
+---Code---
+var threeDoubles = Array(repeating: 2.0, count: 5)
+print(threeDoubles)
+---Output---
+[2.0, 2.0, 2.0, 2.0, 2.0]
+
+---Code---
+print("---Addition of two array---")
+var threeDoubles = Array(repeating: 2.0, count: 5)
+print("First Array: \(threeDoubles)")
+var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
+print("Second Array: \(anotherThreeDoubles)")
+var sixDoubles = threeDoubles + anotherThreeDoubles
+print("Addition is: \(sixDoubles)")
+print("Size of array is: \(sixDoubles.count)")
+---Output---
+---Addition of two array---
+First Array: [2.0, 2.0, 2.0, 2.0, 2.0]
+Second Array: [2.5, 2.5, 2.5]
+Addition is: [2.0, 2.0, 2.0, 2.0, 2.0, 2.5, 2.5, 2.5]
+Size of array is: 8
+
+---Code---
+var shoppingList: [String] = ["Eggs", "Milk"] 
+print("Array is: \(shoppingList)")
+print("The shopping list contains \(shoppingList.count) items.")
+---Output---
+Array is: ["Eggs", "Milk"]
+The shopping list contains 2 items.
+
+
+//ACCESSING AND MODIFYING AN ARRAY
+---Code---
+if shoppingList.isEmpty { 
+print("The shopping list is empty.") 
+} else { 
+print("The shopping list isn't empty.") 
+}
+// Prints "The shopping list isn't empty."
+
+shoppingList.append("Flour") 
+// shoppingList now contains 3 items, and someone is making pancakes
+
+shoppingList += ["Baking Powder"] 
+// shoppingList now contains 4 items
+
+shoppingList += ["Chocolate Spread", "Cheese", "Butter"] 
+// shoppingList now contains 7 items
+
+shoppingList[4...6] = ["Bananas", "Apples"] 
+// shoppingList now contains 6 items
+
+shoppingList.insert("Maple Syrup", at: 0) 
+// shoppingList now contains 7 items
+// "Maple Syrup" is now the first item in the list
+
+
+---SWIFT CODE---
+print("---ARRAYS IN SWIFT---")
+var shoppingList: [String] = ["Eggs", "Milk"]
+shoppingList.append("Flour")
+shoppingList += ["Baking Powder"] 
+shoppingList += ["Chocolate Spread", "Cheese", "Butter"] 
+var firstItem = shoppingList[0] 
+print("firstItem at [0] is \(firstItem)")
+shoppingList[0] = "Six Eggs"
+var FirstItem = shoppingList[0]
+print("firstItem at [0] now is \(FirstItem)")
+shoppingList[4...6] = ["Bananas", "Apples"]
+shoppingList.insert("Maple Syrup", at: 0)
+print("Array is: \(shoppingList)")
+print("The shopping list contains \(shoppingList.count) items.")
+let mapleSyrup = shoppingList.remove(at: 0) 
+print("Array is: \(shoppingList)")
+print("The shopping list contains \(shoppingList.count) items.")
+let apples = shoppingList.removeLast() 
+print("Array is: \(shoppingList)")
+print("The shopping list contains \(shoppingList.count) items.")
+
+//If-Else Loop
+print()
+if shoppingList.isEmpty 
+{ 
+   print("The shopping list is empty.") 
+} 
+else { 
+   print("The shopping list isn't empty.") 
+}
+
+print()
+//For-In Loop
+for item in shoppingList { 
+print(item) 
+} 
+
+---OUTPUT---
+firstItem at [0] is Eggs
+firstItem at [0] now is Six Eggs
+Array is: ["Maple Syrup", "Six Eggs", "Milk", "Flour", "Baking Powder", "Bananas", "Apples"]
+The shopping list contains 7 items.
+Array is: ["Six Eggs", "Milk", "Flour", "Baking Powder", "Bananas", "Apples"]
+The shopping list contains 6 items.
+Array is: ["Six Eggs", "Milk", "Flour", "Baking Powder", "Bananas"]
+The shopping list contains 5 items.
+
+The shopping list isn't empty.
+
+Six Eggs
+Milk
+Flour
+Baking Powder
+Bananas
+
+---ASSIGNMENT---
+---Code---
+var digit = [1, 2, 3, 4,5,6]
+print("Array is \(digit)")
+var sum = 0
+for i in digit { 
+   sum = sum + i
+}
+
+print("Final Answer is:\(sum)")
+
+---Output---
+Array is [1, 2, 3, 4, 5, 6]
+Final Answer is:21
