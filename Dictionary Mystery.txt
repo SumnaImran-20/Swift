@@ -1,0 +1,108 @@
+//DICTIONARIES INS SWIFT
+---Code---
+var airports: [String: String] = ["JIAP": "Jinnah International Airport", "AIAP": "Alama Iqbal International Airport "]
+print("The airports dictionary contains \(airports.count) items.") 
+print("Dictionary is: \(airports)")
+---Output---
+The airports dictionary contains 2 items.
+Dictionary is: ["JIAP": "Jinnah International Airport", "AIAP": "Alama Iqbal International Airport "]
+
+//IF- Else I SWIFT
+---Code---
+if airports.isEmpty 
+{ 
+ print("The airports dictionary is empty.") 
+} else 
+{ 
+  print("The airports dictionary isn't empty.")
+ }
+---Output---
+The airports dictionary isn't empty.
+
+//Adding elements in Dictionary
+---Code---
+airports["IIAP"] = "Islamabad International Airport"
+print("The airports dictionary contains \(airports.count) items.") 
+print("Dictionary now is: \(airports)")
+---Output---
+The airports dictionary contains 3 items.
+Dictionary now is: ["IIAP": "Islamabad International Airport", "AIAP": "Alama Iqbal International Airport ", "JIAP": "Jinnah International Airport"]
+
+//Replacing value of element
+---Code---
+airports["IIAP"] = "Islamabad Aiport"
+print("The airports dictionary contains \(airports.count) items.") 
+print("The value of IIAP is changed and now dictionary is: \(airports)")
+---Output---
+The airports dictionary contains 3 items.
+The value of IIAP is changed and now dictionaru is: ["IIAP": "Islamabad Aiport", "AIAP": "Alama Iqbal International Airport ", "JIAP": "Jinnah International Airport"]
+
+//Updating value in dictionary
+---Code---
+if let oldValue = airports.updateValue("Jinnah Airport", forKey: "JIAP") { 
+print("The old value for DUB was \(oldValue).") 
+} 
+---Output---
+The old value for DUB was Jinnah International Airport.
+
+//Deleting elements from dictionary
+---Code---
+airports["APL"] = "Apple International"
+print(airports)
+print("Apple International isn't the real airport for APL, so delete it")
+airports["APL"] = nil
+print("Now deleting dictionay is:\(airports)")
+---Output---
+["AIAP": "Alama Iqbal International Airport ", "IIAP": "Islamabad Aiport", "APL": "Apple International", "JIAP": "Jinnah Airport"]
+Apple International isn't the real airport for APL, so delete it
+Now deleting dictionay is:["AIAP": "Alama Iqbal International Airport ", "IIAP": "Islamabad Aiport", "JIAP": "Jinnah Airport"]
+
+//Removing value
+---Code---
+if let removedValue = airports.removeValue(forKey: "IIAP") { 
+print("The removed airport's name is \(removedValue).") 
+} else { 
+print("The airports dictionary doesn't contain a value for DUB.") 
+} 
+---Output---
+The removed airport's name is Islamabad Aiport.
+
+//Iterating Over a Dictionary
+---Code---
+print("Iterating Values using key and value both:")
+for (key, value) in airports { 
+print("\(key): \(value)") 
+}
+---Output---
+Iterating Values using key and value both
+AIAP: Alama Iqbal International Airport 
+JIAP: Jinnah Airport
+
+---Code---
+print("Iterating Values using key:")
+for key in airports.keys { 
+print("Airport code: \(key)") 
+}
+---Output---
+Iterating Values using key:
+Airport code: AIAP
+Airport code: JIAP
+
+---Code---
+print("Iterating Values using value:")
+for value in airports.values { 
+print("Airport name: \(value)") 
+}
+---Output---
+Iterating Values using value:
+Airport name: Jinnah Airport
+Airport name: Alama Iqbal International Airport 
+
+---Code---
+let key = [String](airports.keys) 
+print(key)
+let value = [String](airports.values) 
+print(value)
+---Output---
+["JIAP", "AIAP"]
+["Jinnah Airport", "Alama Iqbal International Airport "]
