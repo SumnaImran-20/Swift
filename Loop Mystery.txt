@@ -20,7 +20,7 @@ Name is  Sumna
 Age is  Twenty One
 Sem is  Four
 
-//FOR-IN LOOPS FOR UMERIC RANGE
+//FOR-IN LOOPS FOR NUMERIC RANGE
 ---Code---
 for index in 1...5 { 
 print("\(index) times 2 is \(index * 2)") 
@@ -91,6 +91,45 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 6
 9
 12
+
+//While Loop
+---Code---
+print("While Loop")
+var index = 10
+while index < 20 {
+ print( "Value of index is \(index)")
+ index = index + 1
+}
+---Output---
+While Loop
+Value of index is 10
+Value of index is 11
+Value of index is 12
+Value of index is 13
+Value of index is 14
+Value of index is 15
+Value of index is 16
+Value of index is 17
+Value of index is 18
+Value of index is 19
+
+//Do While Loop
+---Code---
+print("Do While Loop")
+var i = 1, n = 5
+// repeat...while loop from 1 to 5
+repeat {
+ print("Value of i is \(i)")
+ i = i + 1
+} while (i <= n)
+
+---Output---
+Do While Loop
+Value of i is 1
+Value of i is 2
+Value of i is 3
+Value of i is 4
+Value of i is 5
 
 //Conditional Statements
 ---Code---
